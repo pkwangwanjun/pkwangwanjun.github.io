@@ -169,7 +169,9 @@ $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 根据你的标题信息自动添加具有连接功能的目录。
 ##Markdown其它资源
 [少数派写的*Markdown*入门](https://sspai.com/post/25137)
+
 [GitCafe上写的比较完整的*Markdown*文档](http://www.appinn.com/markdown/)
+
 [知乎上关于Markdown入门的高票回答](https://www.zhihu.com/question/20409634)
 
 
