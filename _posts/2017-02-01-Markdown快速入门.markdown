@@ -41,7 +41,7 @@ function fancyAlert(arg) {
 ```
 * 如果你是数学工作者或者数学爱好者，你需要使用*Markdown*，因为他支持大杀器*Latex*的部分语法。
 
-$$e^{i\pi}+1=0$$
+$$ e^{i\pi}+1=0 $$
 
 ### Markdown编辑器推荐
 
@@ -62,11 +62,14 @@ $$e^{i\pi}+1=0$$
 下划线  _里面内容有下划线_
 粗体   **里面内容是粗体**
 ```
-Mweb中快捷键为：`command+i`,`command+u`,`command+b`
-和Word中快捷键对应一样。
+Mweb中快捷键为：`command+i`,`command+u`,`command+b`和Word中快捷键对应一样。
+
 效果如下：
+
 *里面内容是斜体* 
+
  _里面内容有下划线_
+ 
 **里面内容是粗体**
 
 ### 区块引用
@@ -77,7 +80,9 @@ Mweb中快捷键为：`command+i`,`command+u`,`command+b`
 >第三行文字
 ```
 >第一行文字
+
 >第二行文字
+
 >第三行文字
 
 ### 无序项目 
@@ -90,6 +95,7 @@ Mweb中快捷键为：`command+i`,`command+u`,`command+b`
 ```
 
 在 MWeb 中的快捷键为： `conrol + U`
+
 效果如下：
 
 * 项目一 无序列表 `* + 空格键`
@@ -122,7 +128,7 @@ Mweb中快捷键为：`command+i`,`command+u`,`command+b`
 * 连接：<example@qq.com>
 * [连接](example@qq.com)
 ```
-效果如下
+效果如下:
 * 连接：<example@qq.com>
 * [连接](example@qq.com)
 
@@ -136,9 +142,13 @@ content：此快捷键是`command+shift+k`
 ### 表格
 
 | 题目1 | 题目2 | 题目3 | 题目4 |
+
 | --- | --- | --- | --- |
+
 | 1 | 2 | 3 | 4 |
+
 | 11 | 22 | 33 | 
+
 最好使用Mweb自带的**UI**设置，很方便快捷。
 
 ###删除线和分割线
@@ -148,7 +158,9 @@ content：此快捷键是`command+shift+k`
 ***         `分割线` 
 ```
 效果如下：
+
 ~~删除这些~~
+
 ***
 
 ### 脚注
@@ -156,7 +168,9 @@ content：此快捷键是`command+shift+k`
 `这是一个脚注：[^脚注的名字]`
 `[^脚注的名字]: 这里是脚注信息`
 效果如下：
+
 这是一个脚注：[^脚注的名字]
+
 [^脚注的名字]: 这里是脚注信息
 
 ### Mathjax数学公式
@@ -187,6 +201,7 @@ $$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 ### Toc目录
 
 `[toc]`
+
 根据你的标题信息自动添加具有连接功能的目录。
 
 ## Markdown其它资源
