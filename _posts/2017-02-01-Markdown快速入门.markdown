@@ -15,17 +15,15 @@ tags:
 
 >本文是Markdown的快速入门手册
 
-[toc]
+## 概述
 
-##概述
-
-###什么是Markdown
+### 什么是Markdown
 
 *Markdown*是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
 
 *Markdown*的目标是实现「易读易写」。类似于Html，但比Html已经足够简单了，但这玩意比Html更简单。
 
-###为什么使用Markdown
+### 为什么使用Markdown
 
 * 如果你不想去纠结字体，行间距等排版问题，想把心思放在写作内容上而不是形式上，你需要使用*Markdown*。
 
@@ -45,13 +43,13 @@ function fancyAlert(arg) {
 
 $$e^{i\pi}+1=0$$
 
-###Markdown编辑器推荐
+### Markdown编辑器推荐
 
 *Markdown*的语法虽然足够简单，但如果使用纯代码做比如插入图片相关的工作效率并不是太高，所以一款靠谱的*Markdown*编辑器能大大的加大你的写作效率。我用的编辑器不多，在这里主要推荐一款叫[Mweb](http://zh.mweb.im)的Markdown编辑软件。后面的快捷键和快捷操作均是在Mweb软件下的操作。
 
-##Markdown的语法
+## Markdown的语法
 
-###标题与强调
+### 标题与强调
 
 ```
 # 第一级标题 
@@ -71,7 +69,7 @@ Mweb中快捷键为：`command+i`,`command+u`,`command+b`
  _里面内容有下划线_
 **里面内容是粗体**
 
-###区块引用
+### 区块引用
 
 ```
 >第一行文字
@@ -82,7 +80,7 @@ Mweb中快捷键为：`command+i`,`command+u`,`command+b`
 >第二行文字
 >第三行文字
 
-###无序项目 
+### 无序项目 
 
 ```
 * 项目一 无序列表 `* + 空格键`
@@ -99,7 +97,7 @@ Mweb中快捷键为：`command+i`,`command+u`,`command+b`
 * 项目二的子项目一 无序列表 `TAB + * + 空格键`
 * 项目二的子项目二
 
-###有序项目
+### 有序项目
 
 ```
 `数字 + . + 空格键`
@@ -114,11 +112,11 @@ Mweb中快捷键为：`command+i`,`command+u`,`command+b`
     1. 子项目一
     2. 子项目二
     
-###插入图片
+### 插入图片
 
  直接将图片拖入Mweb中，调整图片宽度则是在图片的描述后面加入`-w+图片宽度`   
  
-###超连接
+### 超连接
 
 ```
 * 连接：<example@qq.com>
@@ -128,14 +126,14 @@ Mweb中快捷键为：`command+i`,`command+u`,`command+b`
 * 连接：<example@qq.com>
 * [连接](example@qq.com)
 
-###行内代码
+### 行内代码
 
 `text` 此快捷键是`command+k`
 
 ```
 content：此快捷键是`command+shift+k`
 ```
-###表格
+### 表格
 
 | 题目1 | 题目2 | 题目3 | 题目4 |
 | --- | --- | --- | --- |
@@ -153,7 +151,7 @@ content：此快捷键是`command+shift+k`
 ~~删除这些~~
 ***
 
-###脚注
+### 脚注
 
 `这是一个脚注：[^脚注的名字]`
 `[^脚注的名字]: 这里是脚注信息`
@@ -161,7 +159,7 @@ content：此快捷键是`command+shift+k`
 这是一个脚注：[^脚注的名字]
 [^脚注的名字]: 这里是脚注信息
 
-###Mathjax数学公式
+### Mathjax数学公式
 
 和Latex的语法是一样的。
 
@@ -176,7 +174,7 @@ $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 行内公式： $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
 ```
 块级公式：
-$$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
+$$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 \\[ \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =
 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
@@ -186,12 +184,12 @@ $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
 **后续将会写一篇latex快速入门手册。**
 
-###Toc目录
+### Toc目录
 
 `[toc]`
 根据你的标题信息自动添加具有连接功能的目录。
 
-##Markdown其它资源
+## Markdown其它资源
 
 [少数派写的*Markdown*入门](https://sspai.com/post/25137)
 
