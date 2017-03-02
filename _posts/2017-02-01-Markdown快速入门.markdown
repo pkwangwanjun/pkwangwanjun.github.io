@@ -142,11 +142,8 @@ content：此快捷键是`command+shift+k`
 ### 表格
 
 | 题目1 | 题目2 | 题目3 | 题目4 |
-
 | --- | --- | --- | --- |
-
 | 1 | 2 | 3 | 4 |
-
 | 11 | 22 | 33 | 
 
 最好使用Mweb自带的**UI**设置，很方便快捷。
@@ -197,6 +194,39 @@ $$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 行内公式： $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
 
 **后续将会写一篇latex快速入门手册。**
+
+**PS：**我用的是**kramdown**的包，为使得网页呈现latex公式，需要在`<head>`,`</head>`标签中添加如下代码调用**mathjax**提供的**CDN**
+
+```<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+```
+如果是在**mweb**中使用就无所谓啦。
 
 ### Toc目录
 
