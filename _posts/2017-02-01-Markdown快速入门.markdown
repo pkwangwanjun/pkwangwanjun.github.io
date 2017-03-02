@@ -148,7 +148,7 @@ content：此快捷键是`command+shift+k`
 
 最好使用Mweb自带的**UI**设置，很方便快捷。
 
-###删除线和分割线
+### 删除线和分割线
 
 ```
 ~~删除这些~~ `删除线`
@@ -164,6 +164,7 @@ content：此快捷键是`command+shift+k`
 
 `这是一个脚注：[^脚注的名字]`
 `[^脚注的名字]: 这里是脚注信息`
+
 效果如下：
 
 这是一个脚注：[^脚注的名字]
@@ -197,7 +198,8 @@ $$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 **PS：**我用的是**kramdown**的包，为使得网页呈现latex公式，需要在`<head>`,`</head>`标签中添加如下代码调用**mathjax**提供的**CDN**
 
-```<script type="text/x-mathjax-config">
+```
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -226,6 +228,7 @@ $$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 ```
+
 如果是在**mweb**中使用就无所谓啦。
 
 ### Toc目录
