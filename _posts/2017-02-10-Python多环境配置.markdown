@@ -29,12 +29,12 @@ Aanaconda支持Linux,Mac,Windows。可以到[官网下载](https://www.continuum
 
 安装完毕后，我们将使用 `conda`管理工具进行环境创建、环境切换、相关包下载的工作。
 
-## 环境管理
+### 环境管理
 
 * 创建环境
 
 ```
-# 创建一个名为python34的环境，指定Python版本是3.4（不用管是3.4.x，conda会为我们自动寻找3.4.x中的最新版本）
+# 创建一个名为python3的环境，指定Python版本是3.4（不用管是3.4.x，conda会为我们自动寻找3.4.x中的最新版本）
 conda create --name python3 python=3.4
 ```
 python3是你创建的环境的名字。python=3.4指的是你创建的环境的python版本。
@@ -54,7 +54,7 @@ conda info --envs
 ```
 source activate python3
 ```
-这时候你在`conda info --envs`一下就会发现：
+这时候你再`conda info --envs`一下就会发现：
 
 ```
 >>python3              */Users/wanjun/anaconda/envs/python3
@@ -66,7 +66,7 @@ source activate python3
 conda remove --name python3 --all
 ```
 
-##包管理
+### 包管理
 
 ```
 # 当前环境下安装requests库
