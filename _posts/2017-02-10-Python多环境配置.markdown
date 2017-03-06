@@ -14,8 +14,10 @@ tags:
 
 # Anaconda多版本python配置
 
-由于python3和python2在代码上有许多的不兼容，所以经常会遇到python2和python3都需要调试的情况，这里主要讲一下如何同时配置python3核python2的环境。这里主要用的是Anaconda的发行版。本文操作主要以Macos为基础，Windows操作可参考后问连接。（主要我不用Windows好多年了。。）
-##anaconda是什么
+由于python3和python2在代码上有许多的不兼容，所以经常会遇到python2和python3都需要调试的情况，这里主要讲一下如何同时配置python3和python2的环境。这里主要用的是Anaconda的发行版。本文操作主要以Macos为基础，Windows操作可参考后文连接。（主要我不用Windows好多年了。。）
+
+## anaconda是什么
+
 Anaconda是一个用于科学计算的Python发行版，他将Python和许多常用的package打包，并提供了包管理和环境管理的功能。Anaconda使用的是`conda`工具来对包盒环境进行管理。
 所以说Anaconda是一个大集合，里面包含了python，各种包如（numpy,requests,pandas），以及管理工具`conda`、IDE`spyder`等等。除此以外还有一套非常漂亮的`UI`界面。
 
