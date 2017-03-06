@@ -1,0 +1,120 @@
+---
+layout:     post
+title:      "有依赖的背包问题"
+subtitle:   "有依赖的背包问题"
+date:       2017-02-16 09:00:00
+author:     "Kakarotto"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - 算法
+---
+
+最近刷**OJ**的题目，遇到一道有依赖的背包问题，在这里记录一下算法思想。
+
+## 一、01背包问题
+
+有依赖背包问题实际上是01背包问题的稍微进一步的延伸。首先回顾一下01背包问题。
+
+### 1、问题描述
+设有一个背包最大装载重量为*W*,有*n*件重量分别为*W1,W2...Wn*,价值分别为*V1,V2...Vn*。求背包内能装载的最大的价值为多少。
+
+**PS：**之所以叫01背包问题是由于对于每件物品要么选择，要么不选择，即对应状态01。
+
+### 2、基本思想
+
+首先上述问题可以转换为下面方程：
+$$\sum_{i=1}^{n}W_iX_i\leq W \quad X_i=0,1$$
+$$f=\sum_{i=1}^nV_i$$
+求$f$的最大值
+
+算法的基本思想是通过递推的方法。
+
+设$f(i,j)$表示前i件物品放进装载量为j的背包中的最大值。那么我们可以很容易得到下面的递推关系：
+$$f(i,j)=max(f(i-1,j),f(i-1,j-W_i)+V_i)$$
+以上递推成立的条件是$j-W_i\geq0$
+
+### 3、代码实现
+
+```
+#python
+n=input()   #输入物品总数
+W=input（）  #输入最大装载数
+weight=[]
+value=[]
+f=[[0 for i in range(m)]for i in range(n)]   #建立mn矩阵
+for i in sys.stdin:
+    i=i.split()
+    weight.append(int(i[0]))            #输入数据
+    value.append(int(i[1]))
+for i in range(n)[1::]:
+    for j in range(m):
+        if j-weight[i]>0:
+            f[i][j]=max(f[i-1][j],f[i-1][j-weight[i]] +value[i])     #递推关系
+        else:
+            f[i][j]=f[i-1][j]
+
+```
+## 二、有依赖背包问题
+
+### 1、问题描述
+
+有依赖背包问题与01背包问题类似，只是对于物品而言，有主件和附件之分。每个主件可以有若干附件，如果要装载附件就必须先装载其对应的主件。为了简单起见，我们这里假设每个主件对应的附件个数不超过两个。需要注意的是，在装载的过程中可以选择主件加附件也可以选择加部分附件，也可以选择不加附件。
+### 2、基本思想
+
+与01背包问题的思想一样，是通过递推的思想来完成。由于每个主件的附件数不超过两个，首先将所有物品分组，将附件和其对应主件分为一组，$W_i[j],V_i[j]$分别表示第i件主件对应的第j件附件的重量和价值，那么其递推关系可以变为下面情况：
+$$f(i,j)=max(f(i-1,j),f(i-1,j-W_i)+V_i),f(i-1,j-W_i-W_i[1])+V_i+V_i[1]),f(i-1,j-W_i-W_i[2])+V_i+V_i[2]),f(i-1,j-W_i-W_i[1]-W_i[2])+V_i+V_i[1]+V_i[2]))$$
+### 3、代码实现
+
+
+```
+#python 应付考试写的，没优化，凑合看吧= =
+line_1=raw_input()
+line_1=line_1.split()
+m=int(line_1[0])
+n=int(line_1[1])
+price=[[0,0,0]for i in range(n)]
+value=[[0,0,0]for i in range(n)]
+
+for index,i in enumerate(range(n)):
+    line_1=raw_input().split()
+    line=[]
+    line.append(int(line_1[0]))
+    line.append(int(line_1[1]))
+    line.append(int(line_1[2]))
+    if line[2]==0:        
+        price[i][0]=line[0]
+        value[i][0]=line[0]*line[1]
+    else:
+        if price[line[2]-1][1]==0:
+            price[line[2]-1][1]=line[0]
+            value[line[2]-1][1]=line[0]*line[1]
+        else:
+             price[line[2]-1][2]=line[0]
+             value[line[2]-1][2]=line[0]*line[1]
+ 
+f=[[0 for i in range(m)]for i in range(n)]
+for i in range(n)[1::]:
+    for j in range(m):
+        f[i][j]=f[i-1][j]
+        if j>=price[i][0]:
+            t=f[i-1][j-price[i][0]]+value[i][0]
+            if t>f[i][j]:
+                f[i][j]=t
+        if j>=price[i][0]+price[i][1]:
+            t=f[i-1][j-price[i][0]-price[i][1]]+value[i][0]+value[i][1]
+            if t>f[i][j]:
+                f[i][j]=t
+        if j>=price[i][0]+price[i][2]:
+            t=f[i-1][j-price[i][0]-price[i][2]]+value[i][0]+value[i][2]
+            if t>f[i][j]:
+                f[i][j]=t
+        if j>=price[i][0]+price[i][1]+price[i][2]:
+            t=f[i-1][j-price[i][0]-price[i][1]-price[i][2]]+value[i][0]+value[i][1]+value[i][2]
+            if t>f[i][j]:
+                f[i][j]=t
+print f[n-1][m-1]     
+
+```
+
+
