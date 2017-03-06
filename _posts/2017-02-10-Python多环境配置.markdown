@@ -9,16 +9,26 @@ catalog: true
 tags:
     - Python
 ---
+
+>cogito ergo sum
+
 # Anaconda多版本python配置
+
 由于python3和python2在代码上有许多的不兼容，所以经常会遇到python2和python3都需要调试的情况，这里主要讲一下如何同时配置python3核python2的环境。这里主要用的是Anaconda的发行版。本文操作主要以Macos为基础，Windows操作可参考后问连接。（主要我不用Windows好多年了。。）
 ##anaconda是什么
 Anaconda是一个用于科学计算的Python发行版，他将Python和许多常用的package打包，并提供了包管理和环境管理的功能。Anaconda使用的是`conda`工具来对包盒环境进行管理。
 所以说Anaconda是一个大集合，里面包含了python，各种包如（numpy,requests,pandas），以及管理工具`conda`、IDE`spyder`等等。除此以外还有一套非常漂亮的`UI`界面。
-##anaconda安装
+
+## anaconda安装
+
 Aanaconda支持Linux,Mac,Windows。可以到[官网下载](https://www.continuum.io/downloads)。下载完毕后默认安装。你可以选择安装python2，或者python3其中一个。我们假设你默认安装的是python2，后面将再安装python3.
-##conda常用命令
+
+## conda常用命令
+
 安装完毕后，我们将使用 `conda`管理工具进行环境创建、环境切换、相关包下载的工作。
-##环境管理
+
+## 环境管理
+
 * 创建环境
 
 ```
@@ -53,6 +63,7 @@ source activate python3
 ```
 conda remove --name python3 --all
 ```
+
 ##包管理
 
 ```
@@ -81,8 +92,11 @@ conda update anaconda
 conda update python
 ```
 注意以上操作都需要你在你需要操作的环境下进行，所以如果是新建的python3环境，那么需要先切换环境然后再操作。
-##大杀器-纯UI设置
+
+## 大杀器-纯UI设置
+
 如果你不想用终端完成这些工作，其实anaconda已经支持很好的UI设置。
+
 * 打开navigator
 * 点击`environments`,左下角点击`create`,创建环境，并选择python版本。
 * 右边是常用package下载，自己选择。
@@ -91,7 +105,8 @@ conda update python
 
 纯UI操作，但偶尔会有小BUG，所以还是稍微了解下   `conda`的操作最好。
 
-##后记
+## 后记
+
 虽然Anaconda号称科学计算包，但解释性语言的运行效率实在不敢恭维。上了十万级的矩阵还是老老实实用`c++`和`fortran`吧。
 
 [中文conda使用指南](http://www.cnblogs.com/harvey888/p/5465452.html)
