@@ -214,5 +214,31 @@ $$min[min\sum_{x_i\in D1}(y_i-c_1)^2+min\sum_{x_i \in D2}(y_i-c_2)^2]$$
 
 最后预测的时候，如果预测落在的叶子节点中有多个训练样本，则取训练样本的均值或者或者中位数作为输出。
     
+   
+```
+#用回归决策树去模拟sin函数，随机生成一百个点去看下拟合状态
+from sklearn import tree
+import math
+import matplotlib.pyplot as plt
+import numpy as np
+import random
+x=[math.sin(i) for i in np.arange(0,10,0.1)]
+y=[i for i in np.arange(0,10,0.1)]
+plt.plot(y,x)
+a=np.zeros((len(x),1))
+for index,i in enumerate(y):
+    a[index]=[i]   
+reg=tree.DecisionTreeRegressor()
+reg.fit(a,x)
+y1=[]
+for i in range(100):
+    tmp=random.uniform(0,10)
+    y1.append(tmp)
+b=np.zeros((len(y1),1))
+for index,i in enumerate(y1):
+    b[index]=[i]
+c=reg.predict(b)
+plt.scatter(y1,c)
+```
 
 
