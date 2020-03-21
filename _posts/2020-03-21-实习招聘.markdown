@@ -4,7 +4,7 @@ title:      "实习招聘"
 subtitle:   "实习招聘"
 date:       2020-03-21 09:00:00
 author:     "Kakarotto"
-header-img: "img/post-bg-alibaba.jpg"
+header-img: "img/wx_code.jpg"
 catalog: true
 tags:
     - 实习招聘
@@ -26,6 +26,5 @@ PS：如果你是明年毕业的同学，一定要把握这次机会，不然等
 
 也可帮忙内推阿里巴巴其他部门。
 
-加入下面微信群提前和面试官沟通:
+扫描网页顶端微信群提前和面试官沟通。
 
-![wx_code](img/wx_code.jpg)
