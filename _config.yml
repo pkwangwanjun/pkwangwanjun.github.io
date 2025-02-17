@@ -2,7 +2,7 @@
 title: 卡卡罗特
 SEOTitle: 卡卡罗特 | kakaluote Blog
 header-img: img/home-bg.jpg
-email: 328518864@qq.com
+email: pkwangwanjun@gmail.com
 description: Cogito ergo sum
 keyword: 
 url: "https://pkwangwanjun.github.io"              # your host, for absolute URL
@@ -70,8 +70,8 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "爱编程、爱读书、爱音乐、爱健身、爱摄影、爱旅行。。。。。。"
-sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "Cogito ergo sum."
+sidebar-avatar: /img/avatar-wj.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
